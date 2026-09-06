@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" width="100%" height="100%">
+  <defs>
+    <linearGradient id="navChromeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+    <linearGradient id="navRedGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF2A32" />
+      <stop offset="60%" stop-color="#D71920" />
+      <stop offset="100%" stop-color="#990006" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Shield Emblem -->
+  <g transform="translate(24, 28)">
+    <polygon points="-24,-24 -6,-24 -10,-18 -20,-18" fill="url(#navRedGrad)"/>
+    <polygon points="24,-24 6,-24 10,-18 20,-18" fill="url(#navRedGrad)"/>
+    <polygon points="0,26 -28,-6 -20,-6 0,18 20,-6 28,-6" fill="url(#navChromeGrad)"/>
+    <polygon points="-16,-6 16,-6 12,0 6,0 6,14 0,20 -6,14 -6,0 -12,0" fill="url(#navRedGrad)"/>
+  </g>
+
+  <!-- Right Brand Text -->
+  <g transform="translate(64, 34)">
+    <text font-family="'Inter', 'Rajdhani', sans-serif" font-weight="900" font-style="italic" font-size="32" letter-spacing="2">
+      <tspan fill="url(#navChromeGrad)">TORQ</tspan>
+      <tspan fill="url(#navRedGrad)">V</tspan>
+      <tspan fill="url(#navChromeGrad)">A</tspan>
+    </text>
+    <text y="14" font-family="'Inter', sans-serif" font-weight="800" font-size="8.5" letter-spacing="2" fill="#D71920">
+      ENGINEERED FOR EVERY RIDE
+    </text>
+  </g>
+</svg>

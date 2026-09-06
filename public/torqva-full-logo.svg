@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Dark Carbon Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1e0607" />
+      <stop offset="60%" stop-color="#0a0a0a" />
+      <stop offset="100%" stop-color="#040404" />
+    </radialGradient>
+    
+    <!-- Chrome Silver Gradient for T, O, R, Q, A -->
+    <linearGradient id="chromeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="35%" stop-color="#F1F5F9" />
+      <stop offset="65%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+
+    <!-- Metallic Red Gradient for V and Emblem T -->
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF2A32" />
+      <stop offset="50%" stop-color="#D71920" />
+      <stop offset="100%" stop-color="#990006" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="redGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#D71920" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="800" height="500" rx="8" fill="url(#bgGlow)" />
+  
+  <!-- Carbon Hex Mesh Pattern -->
+  <pattern id="hexPattern" width="16" height="27.71" patternUnits="userSpaceOnUse">
+    <path d="M 8 0 L 16 4.62 L 16 13.86 L 8 18.48 L 0 13.86 L 0 4.62 Z" fill="none" stroke="#1f1f1f" stroke-width="0.8"/>
+  </pattern>
+  <rect width="800" height="500" fill="url(#hexPattern)" opacity="0.4" />
+
+  <!-- TOP EMBLEM BADGE -->
+  <g transform="translate(400, 115)" filter="url(#redGlow)">
+    <!-- Top Wings -->
+    <polygon points="-115,-48 -35,-48 -48,-34 -105,-34" fill="url(#redGrad)"/>
+    <polygon points="115,-48 35,-48 48,-34 105,-34" fill="url(#redGrad)"/>
+    <polygon points="-90,-30 -25,-30 -35,-18 -80,-18" fill="url(#chromeGrad)"/>
+    <polygon points="90,-30 25,-30 35,-18 80,-18" fill="url(#chromeGrad)"/>
+    
+    <!-- Central Shield Frame -->
+    <polygon points="0,62 -70,-12 -54,-12 0,46 54,-12 70,-12" fill="url(#chromeGrad)"/>
+    <!-- Central Red T -->
+    <polygon points="-42,-12 42,-12 34,0 14,0 14,34 0,48 -14,34 -14,0 -34,0" fill="url(#redGrad)"/>
+  </g>
+
+  <!-- BRAND NAME: TORQVA -->
+  <g transform="translate(400, 248)">
+    <text text-anchor="middle" font-family="'Inter', 'Rajdhani', 'Arial Black', sans-serif" font-weight="900" font-style="italic" font-size="94" letter-spacing="4">
+      <tspan fill="url(#chromeGrad)">TORQ</tspan>
+      <tspan fill="url(#redGrad)">V</tspan>
+      <tspan fill="url(#chromeGrad)">A</tspan>
+    </text>
+  </g>
+
+  <!-- TAGLINE: ENGINEERED FOR EVERY RIDE -->
+  <g transform="translate(400, 308)">
+    <polygon points="-240,-7 -175,-7 -190,-1 -248,-1" fill="url(#redGrad)"/>
+    <polygon points="240,-7 175,-7 190,-1 248,-1" fill="url(#redGrad)"/>
+    <text text-anchor="middle" y="-1" font-family="'Inter', sans-serif" font-weight="800" font-size="18" letter-spacing="5" fill="#FFFFFF">
+      ENGINEERED FOR EVERY RIDE
+    </text>
+  </g>
+
+  <!-- SUB-TAGLINE: SUPPLIER OF PREMIUM QUALITY -->
+  <g transform="translate(400, 370)">
+    <text text-anchor="middle" font-family="'Inter', sans-serif" font-weight="800" font-size="22" letter-spacing="3.5" fill="#E2E8F0">
+      SUPPLIER OF PREMIUM QUALITY
+    </text>
+  </g>
+
+  <!-- BOTTOM ACCENT: // TWO WHEELER PLASTIC BODY PARTS // -->
+  <g transform="translate(400, 424)">
+    <text text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="23" letter-spacing="2.5" fill="url(#redGrad)">
+      // TWO WHEELER PLASTIC BODY PARTS //
+    </text>
+  </g>
+</svg>
