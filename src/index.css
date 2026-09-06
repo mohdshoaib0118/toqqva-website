@@ -2,23 +2,42 @@
 
 @layer base {
   :root {
-    --color-bg-main: #050505;
-    --color-bg-card: #0D0D0D;
-    --color-bg-surface: #141414;
-    --color-brand-red: #D71920;
-    --color-brand-bright-red: #E31B23;
+    --color-bg-main: #07080A;
+    --color-bg-card: #0F1117;
+    --color-bg-surface: #171A23;
+    --color-brand-red: #E31B23;
+    --color-brand-bright-red: #FF2A35;
+    --color-brand-red-dark: #A30D13;
     --color-text-primary: #FFFFFF;
-    --color-text-secondary: #A3A3A3;
-    --color-border-dark: #262626;
-    --color-border-red: #D71920;
+    --color-text-secondary: #94A3B8;
+    --color-border-dark: #222734;
+    --color-border-red: #E31B23;
+
+    --font-heading: 'Barlow Semi Condensed', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-tech: 'Rajdhani', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
   }
 
   body {
     background-color: var(--color-bg-main);
     color: var(--color-text-primary);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--font-body);
     overflow-x: hidden;
     scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-tech {
+    font-family: var(--font-tech);
   }
 }
 
@@ -38,25 +57,71 @@ input[type="radio"],
   cursor: pointer !important;
 }
 
-/* Custom Automotive Background Patterns */
+/* Micro-Animations & Dynamic FX */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.shimmer-bg {
+  background: linear-gradient(90deg, #0F1117 25%, #171A23 50%, #0F1117 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Interactive Card Elevate & Border Sweep */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(227, 27, 35, 0.35);
+}
+
+/* Industrial & Automotive Background Patterns */
 .bg-grid-pattern {
-  background-image: radial-gradient(rgba(215, 25, 32, 0.15) 1px, transparent 0);
+  background-image: radial-gradient(rgba(227, 27, 35, 0.18) 1.2px, transparent 0);
   background-size: 24px 24px;
 }
 
 .bg-dots-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 0);
   background-size: 20px 20px;
 }
 
 .bg-carbon-pattern {
   background: 
-    linear-gradient(27deg, #121212 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #121212 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #1a1a1a 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #1a1a1a 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #090909 100%, transparent 100%);
+    linear-gradient(27deg, #101217 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #101217 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #161a22 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #161a22 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #090a0d 100%, transparent 100%);
   background-size: 20px 20px;
+}
+
+.bg-mesh-dark {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 /* Automotive Cut Edge / Angled styling */
@@ -66,6 +131,10 @@ input[type="radio"],
 
 .angled-cut-tl {
   clip-path: polygon(16px 0, 100% 0, 100% 100%, 0 100%, 0 16px);
+}
+
+.angled-notch {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
 }
 
 .skew-badge {
@@ -78,16 +147,26 @@ input[type="radio"],
 
 /* Custom Red Glow Effect */
 .red-glow {
-  box-shadow: 0 0 25px rgba(215, 25, 32, 0.25);
+  box-shadow: 0 0 25px rgba(227, 27, 35, 0.3);
 }
 
 .red-glow-lg {
-  box-shadow: 0 0 40px rgba(215, 25, 32, 0.4);
+  box-shadow: 0 0 45px rgba(227, 27, 35, 0.45);
 }
 
 .red-border-glow:hover {
-  border-color: #D71920;
-  box-shadow: 0 0 15px rgba(215, 25, 32, 0.3);
+  border-color: #E31B23;
+  box-shadow: 0 0 18px rgba(227, 27, 35, 0.35);
+}
+
+/* Metallic Tech Highlights */
+.metallic-gradient {
+  background: linear-gradient(135deg, #1f2430 0%, #101217 50%, #181c25 100%);
+}
+
+.metallic-card {
+  background: linear-gradient(180deg, rgba(28, 33, 44, 0.8) 0%, rgba(13, 15, 20, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Custom Scrollbar */
@@ -97,14 +176,14 @@ input[type="radio"],
 }
 
 ::-webkit-scrollbar-track {
-  background: #090909;
+  background: #07080A;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #262626;
+  background: #222734;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D71920;
+  background: #E31B23;
 }

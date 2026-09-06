@@ -1,0 +1,5 @@
+# Robots.txt for TORQVA Automotive Spare Parts
+User-agent: *
+Allow: /
+
+Sitemap: https://torqva.vercel.app/sitemap.xml

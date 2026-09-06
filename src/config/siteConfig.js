@@ -4,6 +4,7 @@ export const siteConfig = {
   subTagline: "SUPPLIER OF PREMIUM QUALITY TWO WHEELER PLASTIC BODY PARTS",
   category: "Two Wheeler Plastic Spare Parts",
   description: "Wholesale Supplier of Premium Quality Two-Wheeler Plastic Body Parts. Built for exact fit, superior glossy finish, and everyday riding durability.",
+  domainUrl: "https://torqva.vercel.app",
 
   // Primary Phone & WhatsApp Number (Same Number: 7986192068)
   phone: "+917986192068",
@@ -32,13 +33,17 @@ export const siteConfig = {
 
   logoText: "TORQVA",
 
-  showPrices: false, // NO PRICES SHOWN - Wholesale Enquiry mode
+  // Marketing & Analytics Configurations
+  googleAnalyticsId: "", // Paste your GA4 ID (e.g. G-XXXXXXX) when ready
+  facebookPixelId: "",   // Paste Meta Pixel ID when ready
+
+  showPrices: false, // Wholesale Enquiry mode
   showTestimonials: true,
   showGallery: true,
   showDealerEnquiry: true,
   showComparison: true,
   showRecentlyViewed: true,
-  showCatalogueDownload: false,
+  showCatalogueDownload: true,
   cataloguePdf: "",
   
   indicativePriceNotice: "Please contact our sales desk directly on WhatsApp or Call for wholesale quotation and bulk discount tiers.",
