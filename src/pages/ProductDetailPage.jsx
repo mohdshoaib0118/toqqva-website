@@ -20,10 +20,10 @@ export const ProductDetailPage = () => {
 
   if (!product) {
     return (
-      <div className="pt-32 pb-24 text-center text-white min-h-[60vh] space-y-4">
-        <h2 className="text-2xl font-black uppercase">Part Not Found</h2>
+      <div className="py-16 text-center text-white min-h-[60vh] space-y-4 font-body">
+        <h2 className="text-2xl font-black uppercase font-heading">Part Not Found</h2>
         <p className="text-xs text-neutral-400">The requested spare part could not be located in our active catalogue.</p>
-        <Link to="/products" className="inline-block px-6 py-2.5 bg-[#D71920] text-white text-xs font-bold uppercase rounded-sm">
+        <Link to="/products" className="inline-block px-6 py-2.5 bg-[#E31B23] text-white text-xs font-bold uppercase rounded-lg font-display">
           Return to Catalogue
         </Link>
       </div>
@@ -31,7 +31,7 @@ export const ProductDetailPage = () => {
   }
 
   return (
-    <div className="pt-10 pb-16 bg-[#050505] text-white min-h-screen">
+    <div className="py-8 bg-[#07080A] text-white min-h-screen font-body">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <Breadcrumbs
           items={[

@@ -6,7 +6,7 @@ export const RateListPage = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
-    <div className="pt-28 pb-16 bg-[#050505] text-white min-h-screen">
+    <div className="py-6 bg-[#07080A] text-white min-h-screen">
       <RateListTable onSelectProduct={(p) => setSelectedProduct(p)} />
 
       {selectedProduct && (
